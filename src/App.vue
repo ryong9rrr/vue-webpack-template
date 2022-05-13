@@ -1,6 +1,9 @@
 <template>
-  <h1>{{ msg }}</h1>
+  <h1 v-if="msg" class="message" @click="log">
+    {{ msg }}
+  </h1>
   <Hello />
+  <div></div>
 </template>
 
 <script>
@@ -14,6 +17,11 @@ export default {
     return {
       msg: "Hello Vue~!!!",
     };
+  },
+  methods: {
+    log() {
+      return;
+    },
   },
 };
 </script>
