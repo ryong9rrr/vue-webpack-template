@@ -6,7 +6,7 @@
   "extends": ["eslint:recommended", "plugin:vue/vue3-recommended"],
   "rules": {
     "semi": ["error", "always"],
-    "quotes": ["error", "double"],
+    "quotes": ["error", "single"],
     "vue/html-closing-bracket-newline": [
       "error",
       {
