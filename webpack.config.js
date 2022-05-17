@@ -1,39 +1,45 @@
-const path = require("path");
-const { VueLoaderPlugin } = require("vue-loader");
-const HtmlPlugin = require("html-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
+const path = require('path');
+const { VueLoaderPlugin } = require('vue-loader');
+const HtmlPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   resolve: {
-    extensions: [".vue", ".js"],
+    extensions: ['.vue', '.js'],
     alias: {
-      "~": path.resolve(__dirname, "src"),
+      '~': path.resolve(__dirname, 'src'),
     },
   },
-  entry: "./src/main.js",
+  entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, 'dist'),
+    // if local server...
+    //publicPath: '/',
     clean: true,
   },
   module: {
     rules: [
       {
         test: /\.vue$/,
-        use: "vue-loader",
+        use: 'vue-loader',
       },
       {
         test: /\.s?css$/,
-        use: ["vue-style-loader", "css-loader", "sass-loader"],
+        use: ['vue-style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
   plugins: [
     new VueLoaderPlugin(),
     new HtmlPlugin({
-      template: "./src/index.html",
+      template: './src/index.html',
     }),
     new CopyPlugin({
-      patterns: [{ from: "static" }],
+      patterns: [{ from: 'static' }],
     }),
   ],
+  // if local server...
+  // devServer: {
+  //   historyApiFallback: true,
+  // },
 };
