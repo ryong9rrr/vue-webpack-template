@@ -1,5 +1,14 @@
 # Vue webpack settings
 
+- webpack
+- vue (vuex, vue-router)
+- eslint
+- sass(scss)
+- postCSS (autoprefixer)
+- babel
+
+# Usage
+
 ## 1. clone this repository
 
 `git clone [this repository url]`
