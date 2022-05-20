@@ -14,7 +14,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     // if local server...
-    //publicPath: '/',
+    // publicPath: '/',
     clean: true,
   },
   module: {

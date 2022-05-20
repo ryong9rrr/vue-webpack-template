@@ -1,10 +1,10 @@
 <template>
-  <h1>Hello</h1>
+  <h2>Hello</h2>
 </template>
 
 <style scoped lang="scss">
 $color: tomato;
-h1 {
+h2 {
   color: $color;
 }
 </style>
